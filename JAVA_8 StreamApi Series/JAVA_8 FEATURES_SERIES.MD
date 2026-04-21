@@ -1,15 +1,20 @@
 
-1) write a progrma to filter even numbers from a list ?
+## Filter Even Numbers from a List
 
+```java
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
 class Main {
     public static void main(String[] args) {
-        List<Integer > list = Arrays.asList(1, 2, 3 ,4 ,3 ,5 ); 
-        List<Integer> even = list.stream().filter(n->n%2==0).collect(Collectors.toList());
+        List<Integer> list = Arrays.asList(1, 2, 3, 4, 3, 5);
+        List<Integer> even = list.stream()
+            .filter(n -> n % 2 == 0)
+            .collect(Collectors.toList());
         System.out.println(even);
-        
     }
 }
+```
+
+**Output:** `[2, 4]`
